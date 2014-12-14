@@ -1,0 +1,55 @@
+// Place all the styles related to the lawn_bookings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.date-row{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.lawn{
+  height: 100px;
+    text-align:center;
+}
+
+.row-container{
+  max-width:100%;
+}
+
+
+.unbooked{
+      background-color:#008000;
+}
+
+.booked{
+  background-color:#345434;
+}
+
+.booked, .unbooked{;
+  padding:10px;
+  box-sizing:border-box;
+    color:#ffffff;
+  border-radius:10px;
+  margin-top:5px;
+  margin-bottom:5px;
+  height:90px;;
+
+}
+.booked input, .booked p, .unbooked input, .unbooked p{
+  margin-left:auto;
+  margin-right:auto;
+  display: block;
+  text-align:center;
+}
+
+.unbooked input, .booked input{
+    color:#000;
+  border-radius:10px;
+}
+
+.lawn-date{
+  height: 100px;
+  vertical-align: middle;
+  display: table-cell;
+  font-size:20px;
+}

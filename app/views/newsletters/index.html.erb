@@ -1,0 +1,26 @@
+<h1>Newsletters</h1>
+<section class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Newsletter</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @year = nil %>
+    <% @newsletters.order("date DESC").each do |newsletter| %>
+    <% if newsletter.date.year.to_s != @year%>
+       <tr>
+        <td colspan="2"><%= newsletter.date.year.to_s %> Newsletters</td>
+        </tr>
+    <% end %>
+      <tr>
+        <td><a href="<%= newsletter.newsletter %>" target="_blank" ><%= newsletter.name %></a></td>
+        <td><%= newsletter.date.strftime('%d/%m/%Y') %></td>
+        <% @year = newsletter.date.year.to_s %>
+    <% end %>
+  </tbody>
+</table>
+</section>

@@ -1,0 +1,37 @@
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/home">
+          <%= image_tag("Cheam_Croquet_Club.png", :class => "logo") %>
+         </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "How to Join", join_path %></li>
+            <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Book a Lawn", lawn_bookings_path %></li>
+            <li><%= link_to "What You Need", equipment_path %></li>
+            <li><%= link_to "Club Matters", clubmatters_path %></li>
+            <li><%= link_to "Getting Here", location_path %></li>
+            <li><%= link_to "Croquet Links", links_path %></li>
+            <li><%= link_to "Newsletters", newsletters_path %></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<section id="intro-section">
+    <header id="intro-header">
+      <h1>Cheam Croquet and Bowls Club</h1>
+    </header>
+  </section>

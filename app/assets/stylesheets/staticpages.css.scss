@@ -1,0 +1,107 @@
+@mixin maintain-ratio($ratio: 1 1) {
+  $width: 100%;
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+  
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
+}
+
+#body{
+    max-width: 800px;
+    margin-left:auto;
+  margin-right:auto;
+  font-family: Arial, Sans-serif;
+
+}
+  
+#intro-header h1{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-shadow: -2px -2px 1px #333;
+  font-size: 3.5vw;
+}
+
+#intro-header{
+  background: url("/assets/Cheams.png");
+  border-radius: 20px;
+  color:white;         /* <------ */
+  padding-top:22%;
+  background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
+}
+
+.map{
+   @include maintain-ratio(1 1); 
+}
+
+p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.logo{
+  max-width:100px;
+  margin-top: -7px;
+}
+
+.navbar{
+  min-height: 90px;
+  margin-bottom:0px;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border: none;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  margin-top:30px;
+}
+
+@media (min-width: 768px){
+  .navbar-default .navbar-collapse {
+    margin-top:85px;
+    margin-bottom:5px;
+  }
+}
+
+@media (max-width: 880px){
+  #body{
+    margin-left:5%;
+    margin-right:5%;
+  }
+}
+
+@media (max-width: 432px){
+  #intro-header h1{
+    font-size: 14px;
+  }
+}
+
+.navbar-nav > li:hover {
+  background-color: #002D00;
+  border-radius:15px;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color:white;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+  color:white;
+}
+
+.navbar-nav{
+  border-radius:15px;
+  background-color:#008000;
+}
+
+.link-list{
+  list-style: none;
+}
+.container{max-width:800px;}
